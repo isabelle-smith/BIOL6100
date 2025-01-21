@@ -3,7 +3,8 @@ title: "Markdown"
 author: "Isabelle Smith"
 date: "2025-01-21"
 output: 
-  html_document
+  html_document: 
+    number_sections: yes
 ---
 
 ```{r setup, include=FALSE}
@@ -14,8 +15,8 @@ Test text: blah blah blah.
 
 Two returns for new paragraph.
 
-First line.
-(Two spaces...) Second line.
+First line. (Two spaces...)  
+Second line.
 
 # Biggest Header
 
@@ -56,7 +57,7 @@ use three.
 
 Insert a calculation and only show output: `r 7 + pi`
 
-#### Code Chunks
+#### Code Chunks:
 
 ```{r}
 
@@ -74,11 +75,50 @@ Adding `{r eval=TRUE, echo=FALSE}`:
 ```
 
 
-#### LaTeX
+#### LaTeX:
 
 Single dollar signs: $a+b=c$
 
 Double dollar signs: (new line)
 
 $$a+b=c$$
+
+
+##### Getting fancy:
+
+sub- and superscripts...
+
+$$H_A: \sigma^2 \neq 0$$
+
+order of operations...
+
+$$S=cA^z_1 + z_{2+x}$$
+
+
+a classic...
+
+$$f(x) = \frac{1}{\sqrt{2\pi \sigma}} e^{-\frac{(x-\mu)^2}{2 \sigma^2}}$$
+
+summation...
+
+$$\sum_{i=1}^n (y_i - \bar{y})^2$$
+
+escaping characters...
+
+$$\backslash$$
+
+mixing...
+
+$$P(\mbox{Species A} | weight>2.5) = a$$
+
+
+```{r}
+
+## comment
+
+set.seed(777)
+
+rpois(10,7)
+
+```
 
